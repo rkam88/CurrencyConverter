@@ -76,6 +76,13 @@ public class ConverterActivity extends AppCompatActivity implements ConverterVie
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mConverterPresenter.detachView();
+    }
+
     private void initViews() {
         mFromSpinner = findViewById(R.id.spinner_from);
         mToSpinner = findViewById(R.id.spinner_to);

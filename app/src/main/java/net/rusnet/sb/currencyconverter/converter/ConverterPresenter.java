@@ -85,6 +85,10 @@ public class ConverterPresenter {
 
     }
 
+    public void detachView() {
+        mConverterActivity.clear();
+    }
+
     private BigDecimal parseInput(String amount) {
         BigDecimal result;
         if (amount == null) {
